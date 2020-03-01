@@ -25,13 +25,14 @@ SECRET_KEY = 'rrj9hpb-wcxt!nb%nbz#uv20v@!pxdqqcked&j6_5$(ak1y7@f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1', https://nikolaev-work.netlify.com/]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'responce.apps.ResponceConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
