@@ -3,8 +3,16 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+def project_all(request):
+    projects = Project.objects.all()
+    context = {
+        'projects': projects
+    }
+    return render(request, 'index.html', context)
 
-def projects(request): 
-    return render(request, 'projects.html')
+def project_detail(request, p_key):
+    project = Project.objects.get(p_key=p_key)
+    context = {
+        'project': project
+    }
+    return render(request, 'project_detail.html', context)
