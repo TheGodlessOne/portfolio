@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'responce/style.css' %}">
 
 {% block page_content %}
     <h1>{{ project.title }}</h1>
-
+    <div class="flex-container">
+        <img src="{% static project.image %}" alt="" width="100%">
+        <h5>About the project:</h5>
+        <p>{{ project.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ project.technology }}</p>
+    </div>
 {% endblock %}

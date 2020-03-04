@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'responce/style.css' %}">
 
 {% block page_content %}
     <h1>Projects</h1>
+    <div class="flex-container">
     {% for project in projects %}
-        
+        <div class="card-project">
+            <img class="card-img" src="{% static project.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="{% url 'project_detail' project.p_key %}"
+                    class="btn">
+                    Read More
+                </a>
+            </div>
+        </div>
     {% endfor %}
+    </div>
 {% endblock %}
