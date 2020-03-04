@@ -7,23 +7,27 @@
 .card-project {
     display: flex; 
     flex-direction: row; 
+    width: 30%; 
     border: 3px solid #aaa;
-    opacity: 0.7
+    opacity: 0.7;
 }
 
 .card-project:hover {
     border: 3px solid #aaa;
-    opacity: 1
+    opacity: 1;
 }
 
 .card-body {
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
+    margin: 15px;
 }
 
 .card-img {
+    display: flex; 
+    flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .card-title {
