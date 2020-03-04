@@ -11,8 +11,8 @@ def project_all(request):
     }
     return render(request, 'projects.html', context)
 
-def project_detail(request, p_key):
-    project = Project.objects.get(p_key=p_key)
+def project_detail(request, pk):
+    project = Project.objects.get(pk=pk)
     context = {
         'project': project
     }
