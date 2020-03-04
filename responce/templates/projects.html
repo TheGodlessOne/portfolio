@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'responce/style.css' %}">
 
 {% block page_content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'responce/style.css' %}">
     <h1>Projects</h1>
     <div class="flex-container">
     {% for project in projects %}
@@ -11,7 +11,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'project_detail' project.p_key %}"
+                <a href="{% url 'project_detail' project.pk %}"
                     class="btn">
                     Read More
                 </a>
