@@ -20,3 +20,6 @@ def project_detail(request, pk):
         'project': project
     }
     return render(request, 'project_detail.html', context)
+
+def contacts(request): 
+    return render(request, 'contacts.html', context)
