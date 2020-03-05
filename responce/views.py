@@ -22,4 +22,4 @@ def project_detail(request, pk):
     return render(request, 'project_detail.html', context)
 
 def contacts(request): 
-    return render(request, 'contacts.html', context)
+    return render(request, 'contacts.html')
