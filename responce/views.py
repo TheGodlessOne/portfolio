@@ -4,6 +4,9 @@ from responce.models import Project
 
 
 # Create your views here.
+def index(request): 
+    return render(request, 'index.html')
+
 def project_all(request):
     projects = Project.objects.all()
     context = {
