@@ -19,5 +19,5 @@ from responce.views import project_all, project_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/', include('responce.urls'))
+    path('', include('responce.urls'))
 ]
